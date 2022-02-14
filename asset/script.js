@@ -1,3 +1,6 @@
+window.onload = function () {
+    hideLoader($('body'), 1000);
+};
 $(document).ready(function () {
     $('.photo-slider').slick({
         slidesToShow: 1,
@@ -84,4 +87,14 @@ function Ambilnama() {
     var x = document.getElementById("nama").value;
     document.getElementById("tampilnama").innerHTML = x;
 };
+
+// Скрыть лоадер при загрузке товаров
+function hideLoader(el, time = 10) {
+    console.log('hide is run');
+    console.log(el.children('.banter-loader'));
+    el.children('.banter-loader').addClass('loaded');
+    setTimeout(function () {
+        el.children('.banter-loader').addClass('loaded_hide');
+    }, time);
+}
 
