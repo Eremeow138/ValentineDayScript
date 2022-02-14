@@ -1,39 +1,48 @@
-$('.tombol').click(function() {
+$(document).ready(function () {
+    $('.photo-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+});
+
+$('.tombol').click(function () {
     // animate content
     $('.halaman').addClass('animate_content');
     $('.dalemnya_halaman').fadeOut(100).delay(2800).fadeIn();
 
-    setTimeout(function() {
+    setTimeout(function () {
         $('.halaman').removeClass('animate_content');
     }, 3200);
 
     //remove fadeIn class after 1500ms
-    setTimeout(function() {
+    setTimeout(function () {
         $('.halaman').removeClass('fadeIn');
     }, 1100);
 
 });
 
 
-$('.tombol2').click(function() {
+$('.tombol2').click(function () {
     // animate content
     $('.halaman').addClass('animate_content');
     $('.dalemnya_halaman').fadeOut(100).delay(2800).fadeIn();
 
-    setTimeout(function() {
+    setTimeout(function () {
         $('.halaman').removeClass('animate_content');
     }, 3200);
 
     //remove fadeIn class after 1500ms
-    setTimeout(function() {
+    setTimeout(function () {
         $('.halaman').removeClass('fadeIn');
     }, 1100);
 
 });
 
 
-$('.kehome').click(function() {
-    setTimeout(function() {
+$('.kehome').click(function () {
+    setTimeout(function () {
         $('.home').addClass('fadeIn');
     }, 1100);
 
@@ -41,19 +50,21 @@ $('.kehome').click(function() {
 });
 
 
-$('.kehalaman2').click(function() {
-    setTimeout(function() {
+$('.kehalaman2').click(function () {
+    setTimeout(function () {
         $('.halaman2').addClass('fadeIn');
     }, 1100);
 
     JalaninTeks();
     PuterLagu();
-    Ambilnama();
+    // Ambilnama();
+
+
 });
 
 var i = 0;
-var txt = "Ribuan malam ku termenung sendiri, Menunggu seseorang untuk memelukku, Lewati ratusan mimpi tersimpan dalam sanubari, Sendiri di tengah kegelapan yang semu. Terimakasih engkau telah hadir untukku,\nmenemani kesepianku dan telah menjadi penerang dalam gelapku,  I Love You";
-var speed = 200;
+var txt = "В этот день святого Валентина на улице очень холодно. Я дарю тебе самую теплую одежду — мою любовь! Я люблю тебя!";
+var speed = 150;
 
 function JalaninTeks() {
     if (i < txt.length) {
@@ -73,3 +84,4 @@ function Ambilnama() {
     var x = document.getElementById("nama").value;
     document.getElementById("tampilnama").innerHTML = x;
 };
+

@@ -5,7 +5,9 @@
     padding: 0;
     margin: 0;
 }
-
+body {
+    font-size: 20px;
+}
 .hide {
     display: none;
 }
@@ -38,6 +40,7 @@
     padding: 40px 12px 20px 12px;
     text-align: center;
     height: 470px;
+    height: min-content;
     width: 330px;
     align-items: center;
     align-content: center;
@@ -86,6 +89,7 @@
     border-radius: 8px;
     outline: none !important;
     font-weight: bold;
+    font-size: 20px;
     font-family: sans-serif;
 }
 
@@ -150,7 +154,9 @@
     height: 100%;
     width: 100%;
     margin: auto auto;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .halaman .dalemnya_halaman {
@@ -209,6 +215,22 @@
 
 .halaman2 {
     background: #ea97ad;
+}
+
+.photo-slider {
+    overflow: hidden;
+    width: 80%;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: 10px solid #ea97ad;
+
+}
+.photo-slider__slide {
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 @media only screen and (max-width: 767px) {
@@ -318,7 +340,7 @@
         align-content: center;
         color: #c87941;
     }
-    
+
     .tengah2 {
         position: relative;
         margin: 25% auto;
@@ -329,7 +351,6 @@
         border-radius: 14px;
         padding: 35px 10px 10px 10px;
         text-align: center;
-        height: 470px;
         width: 330px;
         align-items: center;
         align-content: center;
@@ -354,7 +375,7 @@
         align-content: center;
         color: #c87941;
     }
-    
+
     .tengah2 {
         position: relative;
         margin: 15% auto;
@@ -365,7 +386,6 @@
         border-radius: 14px;
         padding: 35px 10px 10px 10px;
         text-align: center;
-        height: 470px;
         width: 330px;
         align-items: center;
         align-content: center;
